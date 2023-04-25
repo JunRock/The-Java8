@@ -1,9 +1,21 @@
 package me.whiteship.java8to11;
 
-final class Pra{
-   public void run(){
-       System.out.println("class final keyword");
+public class Pra{
+    private String name;
+    public Pra() {}
+
+    public void run(){
+        name="jun";
+        System.out.println(name);
    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 
 
