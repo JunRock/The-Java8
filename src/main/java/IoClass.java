@@ -37,6 +37,7 @@ public class IoClass {
         Scanner sc=new Scanner(System.in);
         System.out.println(1);
         System.err.println("error");
+        goto
     }
 
     public final class System{
