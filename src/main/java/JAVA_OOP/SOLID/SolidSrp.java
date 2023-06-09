@@ -1,4 +1,4 @@
-package JAVA_OOP;
+package JAVA_OOP.SOLID;
 public class SolidSrp {
     public static void main(String[] args) {
     }
@@ -55,6 +55,7 @@ class Carnivore extends Animal{
     }
 }
 */
+
 /*
 LSP(리스코프 치환 원칙)
  */
@@ -69,6 +70,7 @@ class GrandMother extends Girl{}
 /*
 ISP(인터페이스 분리 원칙)
 */
+/*
 class ZooKeeper{
     public void 먹다(){};
     public void 자다(){};
@@ -84,3 +86,4 @@ interface TigerZooKeeper{
 interface BearZooKeeper{
     public static void 생선주기(){};
 }
+*/
