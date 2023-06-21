@@ -1,10 +1,16 @@
 package JAVA_OOP.DI;
 
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
+
 public class PropertyDi {
     public static void main(String[] args) {
-        Case1 case1=new JellyCase1();
-        Phone1 phone1=new Phone1();
-        phone1.setCase(case1);
+        //ApplicationContext context=new ClassPathXmlApplicationContext("DI.xml",PropertyDi.class);
+        //Phone1 phone1= (Phone1) context.getBean("phone1",Phone1.class);
     }
 }
 interface Case1{
@@ -12,12 +18,11 @@ interface Case1{
 }
 
 class Phone1{
-    Case1 c;
-    public void setCase(Case1 c) {
-        this.c = c;
-    }
+  @Autowired
+    Case1 case1;
 }
 
+@Component
 class ClearCase1 implements Case1{
     @Override
     public String getCase() {
@@ -25,6 +30,7 @@ class ClearCase1 implements Case1{
     }
 }
 
+@Component
 class JellyCase1 implements Case1{
     @Override
     public String getCase() {
