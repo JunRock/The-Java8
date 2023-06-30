@@ -22,6 +22,7 @@ class Proxy implements IService{
     IService iService;
     @Override
     public String runSomething() {
+        System.out.println("흐름제어");
         iService=new Service();
         return iService.runSomething();
     }
