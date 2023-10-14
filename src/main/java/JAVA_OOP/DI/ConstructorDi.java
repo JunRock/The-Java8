@@ -1,13 +1,14 @@
 package JAVA_OOP.DI;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class ConstructorDi {
 
 }
 
 class Phone{
-    Case aCase;
-    public void setaCase(Case aCase) {
-        this.aCase = aCase;
-    }
+    @Autowired
+    private Case aCase;
 }
 
 class Case{

@@ -1,9 +1,14 @@
 package JAVA_OOP.design_pattern;
 
+import java.util.Collections;
+import java.lang.reflect.*;
 public class ProxyPattern {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         IService service=new Proxy();
         System.out.println(service.runSomething());
+        String name="junseok";
+        Method method=String.class.getMethod("length");
+        System.out.println(method.invoke(name));
     }
 }
 

@@ -28,7 +28,6 @@ class Student{
 }
 
 @Component
-
 class Aop{
 
 }
