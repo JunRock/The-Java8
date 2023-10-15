@@ -6,6 +6,11 @@ public class AdapterPattern {
       AdaperServiceB serviceB=new AdaperServiceB();
       serviceA.runService();
       serviceB.runService();
+
+            System.out.println("PostsRepositoryTest 생성자 호출");
+            System.out.println("생성자 의존성 주입 실패");
+            System.out.println("@PostConstruct호출");
+
     }
 }
 
